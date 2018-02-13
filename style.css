@@ -1,0 +1,84 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+}
+
+.cover{
+    background-color: white;
+    position: absolute;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 1s, opacity 1s;
+    z-index: 5;
+    overflow: hidden;
+}
+
+#imagesLoaded{
+    display: none;
+}
+
+.cover.hidden{
+    opacity: 0;
+    transform: scale(0.5);
+    z-index: 6;
+}
+
+#dropzone.hidden{
+    display: none
+}
+
+.invisible{
+    display: none;
+}
+
+.inactive{
+    filter: blur(5px);
+}
+
+#start{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#start:-webkit-full-screen {
+  width: 100%;
+  height: 100%;
+}
+
+#dropzone {
+    border: 2px dashed #67DAFF;
+    width:  70%;
+    height: 500px;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+#start{
+    background-size: cover;
+    background-image: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: local;
+}
+
+#dropzone, #dropzone .content, .cover .content{
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.cover .content {
+    font-family: 'Fira Mono', sans-serif;
+    font-weight: 800;
+    color: #777777;
+    font-size: 20px;
+}
+
+h1 {
+    color: #03A9F4;
+}

@@ -1,0 +1,26 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title>Tiler</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+<body>
+    <div id="start" class="inactive"></div>
+    <div id="dropzone" onDrop="dropHandler(event);" ondragover="canc(event);">
+        <div class="content">
+            <h1>PictureHider</h1>
+            <p>Sem přetáhni obrázky.</p>
+            
+            <div id="imagesLoaded">
+                Počet nahraných obrázků: <span id="num"></span>.
+                <button id="ready">Start</button>
+            </div>
+            <p>Ovládání: Mezerníkem odkryješ celou plochu, klávesou N přejdeš na další obrázek.</p>
+        </div>
+    </div>
+    <div id="img"></div>
+</body>
