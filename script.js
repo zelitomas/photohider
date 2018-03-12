@@ -68,19 +68,11 @@ function canc(ev) {
 }
 
 function restart(){
-    $(".cover").removeClass("invisible");
-    setTimeout(() => {
-        $(".cover").removeClass("hidden");
-    }, 500);
+    $(".cover").removeClass("hidden");
 }
 
 function hide($target){
     $target.addClass("hidden");
-    setTimeout(() => {
-        if($target.hasClass("hidden")){
-            $target.addClass("invisible");
-        }
-    }, 2000);
 }
 
 function uncover(){
